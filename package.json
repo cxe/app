@@ -1,0 +1,29 @@
+{
+  "name": "@cxe/app",
+  "version": "0.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "test:coverage": "npx jest --coverage",
+    "test:update": "npx jest -u"
+  },
+  "bin": {
+    "app": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cxe/app.git"
+  },
+  "keywords": [],
+  "author": "Ian Carter <dev@cxe.io>",
+  "license": "Apache-2.0",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/cxe/app/issues"
+  },
+  "jest": {
+    "coverageDirectory": "tmp/coverage"
+  },
+  "homepage": "https://github.com/cxe/app#readme"
+}
