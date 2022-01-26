@@ -9,7 +9,7 @@
     "test:update": "npx jest -u"
   },
   "bin": {
-    "app": "./cli.js"
+    "app": "./app"
   },
   "repository": {
     "type": "git",
