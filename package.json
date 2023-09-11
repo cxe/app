@@ -1,6 +1,6 @@
 {
     "name": "@cxe/app",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "",
     "keywords": [],
     "author": "Ian Carter <dev@cxe.io>",
@@ -8,9 +8,9 @@
     "private": false,
     "main": "index.js",
     "scripts": {
-        "test": "npx jest",
-        "test:coverage": "npx jest --coverage",
-        "test:update": "npx jest -u",
+        "test": "NODE_OPTIONS='--experimental-vm-modules' npx jest $@",
+        "test:coverage": "npm run test --coverage",
+        "test:update": "npm run test -u",
         "publish": "npm publish --access public"
     },
     "type": "module",
