@@ -1,32 +1,42 @@
 {
-  "name": "@cxe/app",
-  "version": "0.2.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "npx jest",
-    "test:coverage": "npx jest --coverage",
-    "test:update": "npx jest -u"
-  },
-  "bin": {
-    "app": "./app"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cxe/app.git"
-  },
-  "keywords": [],
-  "author": "Ian Carter <dev@cxe.io>",
-  "license": "Apache-2.0",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "bugs": {
-    "url": "https://github.com/cxe/app/issues"
-  },
-  "jest": {
-    "coverageDirectory": "tmp/coverage"
-  },
-  "homepage": "https://github.com/cxe/app#readme"
+    "name": "@cxe/app",
+    "version": "0.3.0",
+    "description": "",
+    "keywords": [],
+    "author": "Ian Carter <dev@cxe.io>",
+    "license": "Apache-2.0",
+    "private": false,
+    "main": "index.js",
+    "scripts": {
+        "test": "npx jest",
+        "test:coverage": "npx jest --coverage",
+        "test:update": "npx jest -u",
+        "publish": "npm publish --access public"
+    },
+    "type": "module",
+    "bin": {
+        "app": "./app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cxe/app.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "bugs": {
+        "url": "https://github.com/cxe/app/issues"
+    },
+    "jest": {
+        "coverageDirectory": "tmp/coverage",
+        "testPathIgnorePatterns": [
+            "<rootDir>/build/",
+            "<rootDir>/node_modules/",
+            "<rootDir>/tmp/"
+        ]
+    },
+    "homepage": "https://github.com/cxe/app#readme",
+    "engines": {
+        "node": "18.12.0"
+    }
 }
