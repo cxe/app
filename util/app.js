@@ -17,7 +17,7 @@ const date = new Date(statSync(manifestFile).birthtime)
     .slice(0, -5)
     .replaceAll(':', '-');
 const { config = {}, ...manifest } = JSON.parse(readFileSync(manifestFile));
-Object.assign(app, manifest, config, { date, mode, pid, ppid, lts });
+Object.assign(app, manifest, config);
 
 // env variables starting with "app_" or "APP_" take precedence over manifest values
 for (const vname in env) {
@@ -34,3 +34,16 @@ for (const vname in env) {
         ref[name] = env[vname];
     }
 }
+
+// add system properties
+Object.assign(app, {
+    date,
+    lts,
+    mode,
+    pid,
+    ppid,
+    server: null,
+    async start() {
+        console.log(`started in ${mode}-mode`);
+    },
+});

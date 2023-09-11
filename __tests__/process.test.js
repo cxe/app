@@ -1,4 +1,4 @@
-import { run } from '../process.js';
+import { run } from '../util/process.js';
 
 describe('run', () => {
     it('should return output of valid command', () => {
